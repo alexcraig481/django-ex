@@ -7,6 +7,10 @@
     <ul>
         {% for log in logs %}
         <li>{{log}}</li>
+        <li>
+            <p><a href="{%url 'logs:log_entry' log.id %}">{{ log.date_added|date:'M d, Y H:i'}}</a> </p>
+            <p>{{log.text|linebreaks }}</p>
+        </li>
         {% empty %}
         <li>No topics have been added yet </li>
         {% endfor %}
