@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +7,9 @@
     <title>Title</title>
 </head>
 <body>
-    <p>This is the base</p>
+    <p>This is the base
+    <a href="{% url 'home' %}">Logs</a>
+    </p>
+{% block content %}{% endblock content%}
 </body>
 </html>

@@ -23,6 +23,7 @@ from welcome.views import index, health
 urlpatterns = [
     #path('', index, name='home'),
     path('', TemplateView.as_view(template_name='index.html'), name='home'),
+    path('', include('logs.urls')),
     path('health/', health),
     path('admin/', admin.site.urls),
 ]
