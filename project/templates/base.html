@@ -8,7 +8,9 @@
 </head>
 <body>
     <p>This is the base
-    <a href="{% url 'home' %}">Logs</a>
+        <a href="{% url 'home' %}">Logs</a>
+        <a href ="{% url 'logs:logs' %}">Logs</a>
+
     </p>
 {% block content %}{% endblock content%}
 </body>

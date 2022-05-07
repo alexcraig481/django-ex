@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h1>{{log.date_added}}</h1>
+    <p>Edit your stuff:</p>
+    <form action="{%url 'logs:edit_entry' log.id %}" method='post'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button name='submit'>Add entry</button>
+    </form>
+
+{% endblock content%} 
